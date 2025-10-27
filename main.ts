@@ -5,14 +5,15 @@
  * This program lights up neopixels
 */
 
-let lightLevel:number = 0
-let strip = neopixel.create(DigitalPin.P0, 4,NeoPixelMode.RGB)
+let lightLevel: number = 0
+let strip = neopixel.create(DigitalPin.P0, 4, NeoPixelMode.RGB)
 
 basic.forever(function () {
     lightLevel = input.lightLevel()
     strip.clear()
 
     if (lightLevel <= 51) {
+        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
 
