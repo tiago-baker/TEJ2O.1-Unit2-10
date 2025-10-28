@@ -13,27 +13,28 @@ basic.forever(function () {
     strip.clear()
 
     if (lightLevel <= 51) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
 
     if (lightLevel > 52) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
 
     if (lightLevel > 104) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
 
     if (lightLevel > 156) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
 
     if (lightLevel > 208) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     }
+    basic.pause(1000)
 })
