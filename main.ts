@@ -9,6 +9,7 @@
 let lightLevel: number = 0
 let neopixelStrip: neopixel.Strip = null
 
+    // get lightLevel
     lightLevel = input.lightLevel()
     
 // cleanup
@@ -21,7 +22,9 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
+    // lightLevel <= 51
     if (lightLevel <= 51) {
+        // 0 neopixels on
         neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
@@ -30,7 +33,9 @@ basic.showIcon(IconNames.Happy)
         basic.showIcon(IconNames.Happy)
     }
 
+    // lightLevel > 52
     if (lightLevel > 52) {
+        // 1 neopixels on
         neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
@@ -40,7 +45,9 @@ basic.showIcon(IconNames.Happy)
 
     }
 
+    // lightLevel > 104
     if (lightLevel > 104) {
+        // 2 neopixels on
         neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
@@ -50,7 +57,9 @@ basic.showIcon(IconNames.Happy)
 
     }
 
+    // lightLevel > 156
     if (lightLevel > 156) {
+        // 3 neopixels on
         neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
@@ -59,8 +68,10 @@ basic.showIcon(IconNames.Happy)
         basic.showIcon(IconNames.Happy)
 
     }
-
+    
+    // lightLevel > 208
     if (lightLevel > 208) {
+        // 4 neopixels on
         neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
@@ -69,4 +80,3 @@ basic.showIcon(IconNames.Happy)
         basic.showIcon(IconNames.Happy)
 
     }
-
