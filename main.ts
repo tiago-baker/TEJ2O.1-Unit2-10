@@ -9,10 +9,10 @@
 let lightLevel: number = 0
 let neopixelStrip: neopixel.Strip = null
 
-    // get lightLevel
-    lightLevel = input.lightLevel()
+// = lightLevel to the input lightLevel
+lightLevel = input.lightLevel()
     
-// cleanup
+// clear neopixels
 basic.clearScreen()
 neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
