@@ -9,18 +9,20 @@
 let lightLevel: number = 0
 let neopixelStrip: neopixel.Strip = null
 
-// = lightLevel to the input lightLevel
-lightLevel = input.lightLevel()
+    // = lightLevel to the input lightLevel
+    lightLevel = input.lightLevel()
     
 // clear neopixels
 basic.clearScreen()
-neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+neopixelStrip = neopixel.create(DigitalPin.P0, 4, NeoPixelMode.RGB)
 neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
+
+   neopixelStrip.clear() 
 
     // lightLevel <= 51
     if (lightLevel <= 51) {
@@ -36,7 +38,7 @@ basic.showIcon(IconNames.Happy)
     // lightLevel > 52
     if (lightLevel > 52) {
         // 1 neopixels on
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
         neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
@@ -48,8 +50,8 @@ basic.showIcon(IconNames.Happy)
     // lightLevel > 104
     if (lightLevel > 104) {
         // 2 neopixels on
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
+        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
         neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.show()
@@ -60,9 +62,9 @@ basic.showIcon(IconNames.Happy)
     // lightLevel > 156
     if (lightLevel > 156) {
         // 3 neopixels on
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
+        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
         neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
         neopixelStrip.show()
         basic.showIcon(IconNames.Happy)
@@ -72,10 +74,10 @@ basic.showIcon(IconNames.Happy)
     // lightLevel > 208
     if (lightLevel > 208) {
         // 4 neopixels on
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.White))
-        neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.White))
+        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+        neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
         neopixelStrip.show()
         basic.showIcon(IconNames.Happy)
 
