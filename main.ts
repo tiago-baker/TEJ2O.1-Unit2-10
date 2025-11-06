@@ -76,4 +76,3 @@ basic.showIcon(IconNames.Happy)
         neopixelStrip.show()
         basic.showIcon(IconNames.Happy)
     }
-
