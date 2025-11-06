@@ -22,6 +22,7 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
+input.onButtonPressed(Button.A, function() {
     // lightLevel <= 51
     if (lightLevel <= 51) {
         // 0 neopixels on
@@ -76,3 +77,4 @@ basic.showIcon(IconNames.Happy)
         neopixelStrip.show()
         basic.showIcon(IconNames.Happy)
     }
+})
