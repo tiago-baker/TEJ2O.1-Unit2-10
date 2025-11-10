@@ -12,16 +12,19 @@ let neopixelStrip: neopixel.Strip = null
 // = lightLevel to the input lightLevel
 lightLevel = input.lightLevel()
 
+// setup
+basic.clearScreen()
+neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+neopixelStrip.show()
+basic.showIcon(IconNames.Happy)
+
 input.onButtonPressed(Button.A, function() {
-    // clear neopixels
+    neopixelStrip.clear()
     basic.clearScreen()
-    neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.show()
-    basic.showIcon(IconNames.Happy)
     
     // lightLevel <= 51
     if (lightLevel <= 51) {
